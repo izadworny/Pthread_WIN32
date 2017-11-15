@@ -143,6 +143,8 @@ build:
   verbosity: minimal
   
 build_script:
+  - ps: if %ARCH%==x64-msvc14 (get-content C:\projects\pthreads-win32-src\pthreads.2\Makefile) | foreach-object {$_ -replace "CPPFLAGS = /I. /DHAVE_PTW32_CONFIG_H", CPPFLAGS = /I. /DHAVE_PTW32_CONFIG_H /D_TIMESPEC_DEFINED"} | set-content C:\projects\pthreads-win32-src\pthreads.2\Makefile
+  - cmd: type "C:\projects\pthreads-win32-src\pthreads.2\Makefile"
   - cmd: cd C:/projects/pthreads-win32-src/pthreads.2
   - cmd: nmake VC-static
   - cmd: dir
