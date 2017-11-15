@@ -167,7 +167,7 @@ build_script:
 
 
 after_build:
-  - cmd: cd "C:/projects/pthreads-win32"
+  - cmd: cd "C:/projects/pthreads-Pthread_WIN32"
   # Generating zip
   - cmd: 7z a pthreads-win32-2.9.1_%ARCH%.zip C:/projects/Pthread_WIN32\bin\
   - cmd: 7z a pthreads-win32-2.9.1_%ARCH%.zip C:/projects/Pthread_WIN32\lib\
@@ -176,7 +176,7 @@ after_build:
 
 on_finish:
   #RDP for finish
-  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+  #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 artifacts:
   - path: ./*.zip
