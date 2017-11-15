@@ -121,6 +121,7 @@ install:
   - cmd: md bin
   - cmd: md lib
   - cmd: md include
+  - cmd: dir
   - cmd: cd "C:\projects\"
   # Setting Visual Compiler
   - cmd: if %ARCH%==win32-msvc9 call "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\vcvarsall.bat"
@@ -143,6 +144,10 @@ build:
   
 build_script:
   - cmd: cd C:/projects/pthreads-win32-src/pthreads.2
+  - cmd: nmake VC-static
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.lib C:/projects/Pthread_WIN32/lib/Release/pthreadVC2-s.lib
+  - cmd: nmake VC-static-debug
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.lib C:/projects/Pthread_WIN32/lib/Debug/pthreadVC2-sd.lib
   - cmd: nmake VC
   - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.dll C:/projects/Pthread_WIN32/bin/pthreadVC2.dll
   - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.dll.manifest C:/projects/Pthread_WIN32/bin/pthreadVC2.dll.manifest
@@ -150,10 +155,6 @@ build_script:
   - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.ilk C:/projects/Pthread_WIN32/bin/pthreadVC2.ilk
   - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.lib C:/projects/Pthread_WIN32/lib/pthreadVC2.lib
   - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.pdb C:/projects/Pthread_WIN32/bin/pthreadVC2.pdb
-  - cmd: nmake VC-static
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.lib C:/projects/Pthread_WIN32/lib/Release/pthreadVC2-s.lib
-  - cmd: nmake VC-static-debug
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.lib C:/projects/Pthread_WIN32/lib/Debug/pthreadVC2-sd.lib
   - cmd: nmake VC-debug
   - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.dll C:/projects/Pthread_WIN32/bin/pthreadVC2d.dll
   - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.dll.manifest C:/projects/Pthread_WIN32/bin/pthreadVC2d.dll.manifest
