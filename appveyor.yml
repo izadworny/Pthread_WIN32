@@ -1,7 +1,7 @@
 version: 1.0.{build}
 branches:
   only:
-    - NexeyaSGara-windows-ci
+    - master
 
 image: Visual Studio 2015
 
@@ -114,7 +114,6 @@ init:
   - cmd: if %ARCH%==x64-msvc9 call C:\projects\vs2008_patch\setup_x64.bat
   - cmd: if %ARCH%==x32-msvc9 call C:\projects\vs2008_patch\setup_x86.bat
   - cmd: copy "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\vcvars64.bat" "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\amd64\vcvarsamd64.bat"
-  
   - cmd: cd "C:\projects\Pthread_WIN32"
   
 install:
@@ -132,7 +131,7 @@ install:
   - cmd: echo "Platform='%Platform%'"
   - cmd: set PYTHONPATH=%PYTHONPATH%
 
-clone_folder: C:\projects\TangoTest
+clone_folder: C:\projects\Pthread_WIN32
 
 build:
   parallel: true
