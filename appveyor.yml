@@ -153,7 +153,7 @@ build_script:
   - cmd: nmake VC
   - cmd: dir
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.dll C:\projects\Pthread_WIN32\bin\pthreadVC2.dll
-  - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.dll.manifest C:\projects\Pthread_WIN32\bin\pthreadVC2.dll.manifest
+  #- cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.dll.manifest C:\projects\Pthread_WIN32\bin\pthreadVC2.dll.manifest
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.exp C:\projects\Pthread_WIN32\bin\pthreadVC2.exp
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.ilk C:\projects\Pthread_WIN32\bin\pthreadVC2.ilk
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.lib C:\projects\Pthread_WIN32\lib\pthreadVC2.lib
@@ -161,7 +161,7 @@ build_script:
   - cmd: nmake VC-debug
   - cmd: dir
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2d.dll C:\projects\Pthread_WIN32\bin\pthreadVC2d.dll
-  - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2d.dll.manifest C:\projects\Pthread_WIN32\bin\pthreadVC2d.dll.manifest
+  #- cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2d.dll.manifest C:\projects\Pthread_WIN32\bin\pthreadVC2d.dll.manifest
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2d.exp C:\projects\Pthread_WIN32\bin\pthreadVC2d.exp
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2d.ilk C:\projects\Pthread_WIN32\bin\pthreadVC2d.ilk
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2d.lib C:\projects\Pthread_WIN32\lib\pthreadVC2d.lib
