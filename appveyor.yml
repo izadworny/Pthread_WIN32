@@ -115,7 +115,7 @@ init:
   - cmd: if %ARCH%==x32-msvc9 call C:\projects\vs2008_patch\setup_x86.bat
   - cmd: copy "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\vcvars64.bat" "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\amd64\vcvarsamd64.bat"
   
-  - cmd: cd "C:\projects\pthreads-win32"
+  - cmd: cd "C:\projects\Pthread_WIN32"
   
 install:
   # Setting Visual Compiler
@@ -141,35 +141,35 @@ build:
 build_script:
   - cmd: cd C:/projects/pthreads-win32-src/pthreads.2
   - cmd: nmake VC
-  - cmd: md c:/projects/pthreads-win32/bin/
-  - cmd: md c:/projects/pthreads-win32/lib/
-  - cmd: md c:/projects/pthreads-win32/include/
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.dll C:/projects/pthreads-win32/bin/pthreadVC2.dll
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.dll.manifest C:/projects/pthreads-win32/bin/pthreadVC2.dll.manifest
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.exp C:/projects/pthreads-win32/bin/pthreadVC2.exp
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.ilk C:/projects/pthreads-win32/bin/pthreadVC2.ilk
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.lib C:/projects/pthreads-win32/lib/pthreadVC2.lib
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.pdb C:/projects/pthreads-win32/bin/pthreadVC2.pdb
+  - cmd: md c:/projects/Pthread_WIN32/bin/
+  - cmd: md c:/projects/Pthread_WIN32/lib/
+  - cmd: md c:/projects/Pthread_WIN32/include/
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.dll C:/projects/Pthread_WIN32/bin/pthreadVC2.dll
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.dll.manifest C:/projects/Pthread_WIN32/bin/pthreadVC2.dll.manifest
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.exp C:/projects/Pthread_WIN32/bin/pthreadVC2.exp
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.ilk C:/projects/Pthread_WIN32/bin/pthreadVC2.ilk
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.lib C:/projects/Pthread_WIN32/lib/pthreadVC2.lib
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.pdb C:/projects/Pthread_WIN32/bin/pthreadVC2.pdb
   - cmd: nmake VC-static
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.lib C:/projects/pthreads-win32/lib/Release/pthreadVC2-s.lib
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2.lib C:/projects/Pthread_WIN32/lib/Release/pthreadVC2-s.lib
   - cmd: nmake VC-static-debug
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.lib C:/projects/pthreads-win32/lib/Debug/pthreadVC2-sd.lib
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.lib C:/projects/Pthread_WIN32/lib/Debug/pthreadVC2-sd.lib
   - cmd: nmake VC-debug
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.dll C:/projects/pthreads-win32/bin/pthreadVC2d.dll
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.dll.manifest C:/projects/pthreads-win32/bin/pthreadVC2d.dll.manifest
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.exp C:/projects/pthreads-win32/bin/pthreadVC2d.exp
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.ilk C:/projects/pthreads-win32/bin/pthreadVC2d.ilk
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.lib C:/projects/pthreads-win32/lib/pthreadVC2d.lib
-  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.pdb C:/projects/pthreads-win32/bin/pthreadVC2d.pdb
-  - cmd: move C:/projects/pthreads-win32-src/Pre-built.2/include/*.* C:/projects/pthreads-win32/include
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.dll C:/projects/Pthread_WIN32/bin/pthreadVC2d.dll
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.dll.manifest C:/projects/Pthread_WIN32/bin/pthreadVC2d.dll.manifest
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.exp C:/projects/Pthread_WIN32/bin/pthreadVC2d.exp
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.ilk C:/projects/Pthread_WIN32/bin/pthreadVC2d.ilk
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.lib C:/projects/Pthread_WIN32/lib/pthreadVC2d.lib
+  - cmd: move C:/projects/pthreads-win32-src/pthreads.2/pthreadVC2d.pdb C:/projects/Pthread_WIN32/bin/pthreadVC2d.pdb
+  - cmd: move C:/projects/pthreads-win32-src/Pre-built.2/include/*.* C:/projects/Pthread_WIN32/include
 
 
 after_build:
   - cmd: cd "C:/projects/pthreads-win32"
   # Generating zip
-  - cmd: 7z a pthreads-win32-2.9.1_%ARCH%.zip C:/projects/pthreads-win32\bin\
-  - cmd: 7z a pthreads-win32-2.9.1_%ARCH%.zip C:/projects/pthreads-win32\lib\
-  - cmd: 7z a pthreads-win32-2.9.1_%ARCH%.zip C:/projects/pthreads-win32\include\
+  - cmd: 7z a pthreads-win32-2.9.1_%ARCH%.zip C:/projects/Pthread_WIN32\bin\
+  - cmd: 7z a pthreads-win32-2.9.1_%ARCH%.zip C:/projects/Pthread_WIN32\lib\
+  - cmd: 7z a pthreads-win32-2.9.1_%ARCH%.zip C:/projects/Pthread_WIN32\include\
 
 
 on_finish:
