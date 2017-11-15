@@ -146,9 +146,9 @@ build_script:
   - cmd: cd C:/projects/pthreads-win32-src/pthreads.2
   - cmd: nmake VC-static
   - cmd: dir *.lib
-  - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.lib C:\projects\Pthread_WIN32\lib\Release\pthreadVC2-s.lib
+  - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.lib C:\projects\Pthread_WIN32\lib\pthreadVC2-s.lib
   - cmd: nmake VC-static-debug
-  - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2d.lib C:\projects\Pthread_WIN32\lib\Debug\pthreadVC2-sd.lib
+  - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2d.lib C:\projects\Pthread_WIN32\lib\pthreadVC2-sd.lib
   - cmd: nmake VC
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.dll C:\projects\Pthread_WIN32\bin\pthreadVC2.dll
   - cmd: move C:\projects\pthreads-win32-src\pthreads.2\pthreadVC2.dll.manifest C:\projects\Pthread_WIN32\bin\pthreadVC2.dll.manifest
