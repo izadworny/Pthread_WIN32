@@ -50,6 +50,7 @@ init:
   - cmd: cd "C:\projects\"
   - appveyor DownloadFile "http://www.mirrorservice.org/sites/sources.redhat.com/pub/pthreads-win32/pthreads-w32-2-9-1-release.zip"
   - cmd: 7z -y x pthreads-w32-2-9-1-release.zip -oC:\projects\pthreads-win32-src\
+  - cmd: cd "C:\projects\Pthread_WIN32"
 
 install:
   - cmd: cd "C:\projects\Pthread_WIN32"
